@@ -3,10 +3,23 @@ const functions = require('firebase-functions');
 const admin  = require('firebase-admin');
 admin.initializeApp()
 
-
-const express  = require('express')
+const express = require("express");
 const app = express();
 
+
+const firebaseConfig = {
+    apiKey: "AIzaSyBmuei_huch_jInfEFrO7fQDK6IweEQ4d8",
+    authDomain: "social-media-app-a2249.firebaseapp.com",
+    databaseURL: "https://social-media-app-a2249.firebaseio.com",
+    projectId: "social-media-app-a2249",
+    storageBucket: "social-media-app-a2249.appspot.com",
+    messagingSenderId: "44583584118",
+    appId: "1:44583584118:web:a7657b2641efba40fdfa57",
+    measurementId: "G-RVBBYLF0J9"
+  };
+
+const firebase = require('firebase')
+firebase.initializeApp(firebaseConfig);
 
 app.get('/screams', (req,res)=>{
     admin
@@ -46,6 +59,9 @@ app.post('/scream',(req, res)=>{
         console.error(err);
     })
 })
-
+// Signup Route
+app.post('/', (req, res)=>{
+    
+})
 
 exports.api = functions.https.onRequest(app);
