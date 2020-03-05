@@ -1,0 +1,13 @@
+[debug] [2020-03-05T12:36:16.633Z] ----------------------------------------------------------------------
+[debug] [2020-03-05T12:36:16.637Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\used\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2020-03-05T12:36:16.641Z] CLI Version:   6.1.0
+[debug] [2020-03-05T12:36:16.641Z] Platform:      win32
+[debug] [2020-03-05T12:36:16.641Z] Node Version:  v12.14.1
+[debug] [2020-03-05T12:36:16.643Z] Time:          Thu Mar 05 2020 13:36:16 GMT+0100 (West Africa Standard Time)
+[debug] [2020-03-05T12:36:16.644Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2020-03-05T12:36:16.660Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-03-05T12:36:16.662Z] > authorizing via signed-in user
+[debug] [2020-03-05T12:36:16.662Z] [iam] checking project social-media-app-a2249 for permissions ["firebase.projects.get"]
+[debug] [2020-03-05T12:36:16.665Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/social-media-app-a2249:testIamPermissions  
+
