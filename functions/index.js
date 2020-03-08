@@ -61,7 +61,14 @@ app.post('/scream',(req, res)=>{
 })
 // Signup Route
 app.post('/', (req, res)=>{
-    
+    const newUser = {
+      email: req.body.email,
+      password: req.body.password,
+      confirmPassword: req.body.confirmPassword,
+      handle: req.body.email,
+    };
 })
+
+//TODO  Validate date
 
 exports.api = functions.https.onRequest(app);
