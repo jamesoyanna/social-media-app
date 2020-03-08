@@ -69,6 +69,13 @@ app.post('/', (req, res)=>{
     };
 })
 
-//TODO  Validate date
+//TODO  Validate data
+firebase.auth().createdAt(newUser.email, newUser.password)
+.then(data=>{
+  return res.status(201).json(message: `user ${data.user.uid} signed up successfully`);
+})
+
+
+
 
 exports.api = functions.https.onRequest(app);
