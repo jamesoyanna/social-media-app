@@ -60,20 +60,28 @@ app.post('/scream',(req, res)=>{
     })
 })
 // Signup Route
-app.post('/', (req, res)=>{
+app.post('/signup', (req, res)=>{
     const newUser = {
       email: req.body.email,
       password: req.body.password,
       confirmPassword: req.body.confirmPassword,
       handle: req.body.email,
     };
-})
 
 //TODO  Validate data
-firebase.auth().createdAt(newUser.email, newUser.password)
+firebase
+.auth()
+.createUserWithEmailAndPassword(newUser.email, newUser.password)
 .then(data=>{
-  return res.status(201).json(message: `user ${data.user.uid} signed up successfully`);
+  return res
+  .status(201)
+  .json({message: `user ${data.user.uid} signed up successfully`});
 })
+  .catch((err)=>{
+    console.error(err);
+    return res.status(500).json({error: err.code})
+  });
+});
 
 
 

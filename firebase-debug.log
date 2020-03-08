@@ -1,32 +1,28 @@
-[debug] [2020-03-05T16:56:57.210Z] ----------------------------------------------------------------------
-[debug] [2020-03-05T16:56:57.214Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\used\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
-[debug] [2020-03-05T16:56:57.214Z] CLI Version:   6.1.0
-[debug] [2020-03-05T16:56:57.214Z] Platform:      win32
-[debug] [2020-03-05T16:56:57.215Z] Node Version:  v12.14.1
-[debug] [2020-03-05T16:56:57.217Z] Time:          Thu Mar 05 2020 17:56:57 GMT+0100 (West Africa Standard Time)
-[debug] [2020-03-05T16:56:57.217Z] ----------------------------------------------------------------------
+[debug] [2020-03-08T10:34:57.741Z] ----------------------------------------------------------------------
+[debug] [2020-03-08T10:34:57.746Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\used\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2020-03-08T10:34:57.747Z] CLI Version:   6.1.0
+[debug] [2020-03-08T10:34:57.747Z] Platform:      win32
+[debug] [2020-03-08T10:34:57.747Z] Node Version:  v12.14.1
+[debug] [2020-03-08T10:34:57.751Z] Time:          Sun Mar 08 2020 11:34:57 GMT+0100 (West Africa Standard Time)
+[debug] [2020-03-08T10:34:57.751Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2020-03-05T16:56:57.236Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2020-03-05T16:56:57.237Z] > authorizing via signed-in user
-[debug] [2020-03-05T16:56:57.238Z] [iam] checking project social-media-app-a2249 for permissions ["firebase.projects.get"]
-[debug] [2020-03-05T16:56:57.241Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2020-03-05T16:56:57.241Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
- <request body omitted>
-[debug] [2020-03-05T16:56:57.734Z] <<< HTTP RESPONSE 200
-[debug] [2020-03-05T16:56:57.818Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/social-media-app-a2249:testIamPermissions  
+[debug] [2020-03-08T10:34:57.779Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-03-08T10:34:57.782Z] > authorizing via signed-in user
+[debug] [2020-03-08T10:34:57.782Z] [iam] checking project social-media-app-a2249 for permissions ["firebase.projects.get"]
+[debug] [2020-03-08T10:34:57.788Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/social-media-app-a2249:testIamPermissions  
 
-[debug] [2020-03-05T16:56:59.455Z] <<< HTTP RESPONSE 200
-[debug] [2020-03-05T16:56:59.456Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/social-media-app-a2249  
+[debug] [2020-03-08T10:34:59.620Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-08T10:34:59.625Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/social-media-app-a2249  
  
-[debug] [2020-03-05T16:57:00.847Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-08T10:35:01.021Z] <<< HTTP RESPONSE 200
 [info] 
 [info] === Serving from 'C:\Users\used\Desktop\REACT JS\social-media-app'...
 [info] 
 [info] i  functions: Preparing to emulate functions.
-[debug] [2020-03-05T16:57:02.806Z] Fetching environment
-[debug] [2020-03-05T16:57:02.815Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/44583584118:getServerAppConfig  
+[debug] [2020-03-08T10:35:03.747Z] Fetching environment
+[debug] [2020-03-08T10:35:03.755Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/44583584118:getServerAppConfig  
  
-[debug] [2020-03-05T16:57:03.381Z] <<< HTTP RESPONSE 200
-[debug] [2020-03-05T16:57:03.382Z] Starting @google-cloud/functions-emulator
-[debug] [2020-03-05T16:57:06.871Z] Parsing function triggers
+[debug] [2020-03-08T10:35:04.424Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-08T10:35:04.425Z] Starting @google-cloud/functions-emulator
+[debug] [2020-03-08T10:35:08.693Z] Parsing function triggers
 [info] +  functions: api: http://localhost:5000/social-media-app-a2249/us-central1/api
