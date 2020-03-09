@@ -70,6 +70,7 @@ app.post('/signup', (req, res)=>{
     };
 
 //TODO  Validate data
+let token, userId;
 db.doc(`/users/${newUser.handle}`)
   .get()
   .then(doc => {
@@ -81,19 +82,30 @@ db.doc(`/users/${newUser.handle}`)
         .createUserWithEmailAndPassword(newUser.email, newUser.password);
     }
   })
-.then(data=>{
-
+.then((data)=>{
+  userId = data.user.uid;
+return data.user.getIdToken();
 })
-firebase
-  .then(data => {
-    return res
-      .status(201)
-      .json({ message: `user ${data.user.uid} signed up successfully` });
-  })
-  .catch(err => {
-    console.error(err);
-    return res.status(500).json({ error: err.code });
-  });
+.then((idToken)=>{
+  token = idToken;
+const userCredentials = {
+  handle: newUser.handle,
+  emai: newUser.email,
+  createdAt: new Date().toISOString(),
+  userId
+};
+return db.doc(`/users/${newUser.handle}`).set(userCredentials);
+})
+.then(()=>{
+  return res.status(201).json({token})
+})
+.catch(err=>{
+  console.error(err);
+  if(err.code ==="auth/email-already-in-use"){
+
+  }
+  res.status(500).json({error: err.code})
+})
 });
 
 
