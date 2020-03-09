@@ -80,6 +80,17 @@ app.post('/signup', (req, res)=>{
       handle: req.body.email,
     };
 
+  let errors = {};
+  if(isEmpty(newUser.email)){
+    errors.email = 'Must not be empty'
+  }else if(!isEmail(newUser.email)){
+    errors.email = 'Must be a valid email address'
+  }
+  if(isEmpty(newUser.password)) errors.password = "Must not be empty"
+  if(newUser.password !==newUser.confirmPassword) errors.confirmPassword = "Passwords must match"
+  if (isEmpty(newUser.password)) errors.password = "Must not be empty";
+
+  if(Object.keys(errors).length>0) return res.status(400).json(errors);
 //TODO  Validate data
 let token, userId;
 db.doc(`/users/${newUser.handle}`)
